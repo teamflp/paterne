@@ -1,0 +1,96 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.navbar {
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-bottom: 2px solid  #0047d6;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #0047d6;
+}
+
+.navbar .navbar-brand:hover {
+  color: #fff;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.navbar .devis .mybtn {
+  background-color: #fff;
+  border-color: #0047d6;
+  color: #0047d6;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar .devis .mybtn:hover {
+  border-color: #fff;
+  color: #fff;
+  background-color: #555555;
+}
+
+.navbar .dropdown-menu {
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 300;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #fff;
+  color: #0047d6;
+  border-color: #0047d6;
+}
+
+.carousel .carousel-inner .carousel-item .img-slide {
+  height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #d60000;
+}
+/*# sourceMappingURL=styles.css.map */
