@@ -11,6 +11,8 @@
      <link rel="stylesheet" href="assets/styles/styles.css">
      <link rel="stylesheet" href="assets/styles/w3.min.css">
      <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+     <script src="../../paterne/assets/js/f88b724a6b.js"></script>
+     <script src="https://kit.fontawesome.com/f88b724a6b.js" crossorigin="anonymous"></script>
      <title>Mon site personnel</title>
 </head>
 <body>

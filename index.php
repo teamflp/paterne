@@ -2,12 +2,20 @@
 <?php include "includes/nav.php"; ?>
 <?php include "includes/carousel.php"; ?>
 
-<div class="container my-5" style="border: 1px solid red;">
+ <!-- Section présentation -->
+<div class="container my-5">
      <div class="row">
-          <div class="col-md-12">
-               <h1>Welcome to the Home Page</h1>
-          </div>
+          <?php include "includes/presentation.php"; ?>
      </div>
 </div>
 
+<!-- Section services -->
+<?php include "includes/services.php"; ?>
+<div class="container">
+<script>
+     router.push('/');
+     router.push('/formations');
+     router.push('/services');
+     router.push('/contact');
+</div>
 <?php include "includes/footer.php"; ?>

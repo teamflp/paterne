@@ -1,19 +1,30 @@
+@charset "UTF-8";
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Poppins,Helvetica,Arial,Verdana,sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 
+/** Barre de navigation */
 .navbar {
   background-color: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-bottom: 2px solid  #0047d6;
+  /** Bouton devis gratuit*/
+  /** Menu déroulant*/
+}
+
+.navbar .social-media {
+  padding: 0 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #333;
 }
 
 .navbar .navbar-brand {
@@ -35,25 +46,70 @@ body {
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 400;
+  cursor: pointer;
+  display: block;
+  font-family: Poppins,Helvetica,Arial,Verdana,sans-serif;
+  line-height: 19px;
+  margin-left: 2rem;
+  padding: 0;
+  text-transform: none;
+  white-space: nowrap;
 }
 
-.navbar .devis .mybtn {
-  background-color: #fff;
-  border-color: #0047d6;
+.navbar .navbar-nav .nav-link:hover {
   color: #0047d6;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
 }
 
-.navbar .devis .mybtn:hover {
-  border-color: #fff;
+.navbar .devis, .navbar .carousel .carousel-inner .carousel-item .btncarousel, .carousel .carousel-inner .carousel-item .navbar .btncarousel {
+  padding: 0.5rem 1rem;
+}
+
+.navbar .devis .mybtn, .navbar .carousel .carousel-inner .carousel-item .btncarousel .mybtn, .carousel .carousel-inner .carousel-item .navbar .btncarousel .mybtn {
+  background-color: #0047d6;
+  border-radius: 60px;
+  border-style: none;
+  -webkit-box-shadow: #e81c2e 0 0 0 0 inset;
+          box-shadow: #e81c2e 0 0 0 0 inset;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #fff;
-  background-color: #555555;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Barlow,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 10px 30px 12px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+}
+
+.navbar .devis .mybtn:hover, .navbar .carousel .carousel-inner .carousel-item .btncarousel .mybtn:hover, .carousel .carousel-inner .carousel-item .navbar .btncarousel .mybtn:hover {
+  background-color: #e81c2e;
+  -webkit-box-shadow: #e81c2e 200px 0 0 0 inset;
+          box-shadow: #e81c2e 200px 0 0 0 inset;
+  color: #fff;
+  outline: none;
+}
+
+.navbar .devis .mybtn:focus, .navbar .carousel .carousel-inner .carousel-item .btncarousel .mybtn:focus, .carousel .carousel-inner .carousel-item .navbar .btncarousel .mybtn:focus {
+  outline: none;
+}
+
+.navbar .devis .mybtn:active, .navbar .carousel .carousel-inner .carousel-item .btncarousel .mybtn:active, .carousel .carousel-inner .carousel-item .navbar .btncarousel .mybtn:active {
+  outline: 0;
+}
+
+.navbar .devis .mybtn:disabled, .navbar .carousel .carousel-inner .carousel-item .btncarousel .mybtn:disabled, .carousel .carousel-inner .carousel-item .navbar .btncarousel .mybtn:disabled {
+  cursor: not-allowed;
+  opacity: 65;
 }
 
 .navbar .dropdown-menu {
@@ -82,6 +138,7 @@ body {
   border-color: #0047d6;
 }
 
+/** Carousel*/
 .carousel .carousel-inner .carousel-item .img-slide {
   height: 80vh;
   -o-object-fit: cover;
@@ -92,5 +149,155 @@ body {
 
 .carousel .carousel-indicators .active {
   background-color: #d60000;
+}
+
+.services-web {
+  padding: 4rem 0;
+  background-color: #f5f5f5;
+}
+
+.services-web .services-web-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.services-web .services-web-title h4 {
+  color: #0047d6;
+  font-size: 1rem;
+}
+
+.services-web .services-web-title h4, .services-web .services-web-title h2, .services-web .services-web-title p {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.services-web .box {
+  cursor: pointer;
+}
+
+.services-web .box:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.services-web .box .box-headding {
+  color: #0047d6;
+  font-size: 1rem;
+  font-size: 1rem;
+}
+
+.services-web .box .box-content {
+  text-align: left;
+}
+
+.section-contact {
+  padding: 0.5rem 1rem;
+}
+
+.section-contact .btn-devis {
+  background-color: #0047d6;
+  border-style: none;
+  border-radius: 60px;
+  -webkit-box-shadow: #e81c2e 0 0 0 0 inset;
+          box-shadow: #e81c2e 0 0 0 0 inset;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 10px 30px 12px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+}
+
+.section-contact .btn-devis:hover {
+  background-color: #e81c2e;
+  -webkit-box-shadow: #e81c2e 200px 0 0 0 inset;
+          box-shadow: #e81c2e 200px 0 0 0 inset;
+  color: #fff;
+  outline: none;
+}
+
+.section-contact .btn-devis:focus {
+  outline: none;
+}
+
+.section-contact .btn-devis:active {
+  outline: 0;
+}
+
+.section-contact .btn-devis:disabled {
+  cursor: not-allowed;
+  opacity: 65;
+}
+
+/**  Media query*/
+@media screen and (max-width: 912px) {
+  .navbar {
+    background-color: #e0e0e0;
+  }
+  .navbar .navbar-brand {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+  .navbar .navbar-nav .nav-link {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+  .navbar .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+  .devis, .carousel .carousel-inner .carousel-item .btncarousel {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    position: fixed;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #0047d6;
+  }
+  .devis .mybtn, .carousel .carousel-inner .carousel-item .btncarousel .mybtn {
+    width: 100%;
+    color: #fff;
+    border-radius: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+  }
+  .carousel .carousel-inner .carousel-item .img-slide {
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .carousel .carousel-indicators .active {
+    background-color: #d60000;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

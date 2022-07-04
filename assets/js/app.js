@@ -86,3 +86,21 @@ new Vue({
           ]
      }
 });
+
+// Créer de router pour la page d'accueil
+
+const router = new VueRouter({
+     mode: 'history',
+     routes: [
+          { path: '/', component: Accueil },
+          { path: '/formations', component: Formation },
+          { path: '/services', component: Services },
+          { path: '/contact', component: Contact },
+     ]
+});
+
+router.push('/');
+router.push('/formations');
+router.push('/services');
+router.push('/contact');
+

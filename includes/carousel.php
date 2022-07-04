@@ -6,27 +6,29 @@
      </div>
      <div class="carousel-inner">
           <div class="carousel-item active">
-               <img class="img-slide w-100 img-fluid" src="images/carousel/12.jpg" alt="First slide">
+               <img class="img-slide w-100 img-fluid" src="assets/images/carousel/12.webp" alt="First slide">
                <div class="container">
                     <div class="carousel-caption text-start">
                          <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exemple de titre.</font></font></h1>
                          <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Un contenu d'espace réservé représentatif pour la première diapositive du carrousel.</font></font></p>
-                         <p><a class="btn btn-lg btn-primary" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Inscrivez-vous aujourd'hui</font></font></a></p>
+                         <p><a class="btncarousel btn btn-lg btn-primary" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Inscrivez-vous aujourd'hui</font></font></a></p>
                     </div>
                </div>
           </div>
-          <div class="carousel-item">
-              <img class="img-slide w-100 img-fluid" src="images/carousel/02.jpg" alt="First slide">
+
+           <div class="carousel-item">
+               <img class="img-slide w-100 img-fluid" src="assets/images/carousel/02.webp" alt="First slide">
                <div class="container">
-                    <div class="carousel-caption">
-                         <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Un autre exemple de titre.</font></font></h1>
-                         <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Un contenu d'espace réservé représentatif pour la deuxième diapositive du carrousel.</font></font></p>
-                         <p><a class="btn btn-lg btn-primary" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apprendre encore plus</font></font></a></p>
+                    <div class="carousel-caption text-end">
+                         <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Un de plus pour faire bonne mesure.</font></font></h1>
+                         <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Un contenu d'espace réservé représentatif pour la troisième diapositive de ce carrousel.</font></font></p>
+                         <p><a class="btn btn-lg btn-primary" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Parcourir la galerie</font></font></a></p>
                     </div>
                </div>
           </div>
+
           <div class="carousel-item">
-               <img class="img-slide w-100 img-fluid" src="images/carousel/03.jpg" alt="First slide">
+               <img class="img-slide w-100 img-fluid" src="assets/images/carousel/03.webp" alt="First slide">
                <div class="container">
                     <div class="carousel-caption text-end">
                          <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Un de plus pour faire bonne mesure.</font></font></h1>

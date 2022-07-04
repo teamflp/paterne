@@ -6,15 +6,21 @@
 }
 
 body {
-     font-family: 'Open Sans', sans-serif;
+     font-family: Poppins,Helvetica,Arial,Verdana,sans-serif;;
      font-size: 16px;
      line-height: 1.5;
 }
 
+/** Barre de navigation */
 .navbar {
      background-color: #fff;
      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-     border-bottom: 2px solid  #0047d6;
+    
+    .social-media {
+          padding: 0 1rem;
+          justify-content: center;
+          background-color: #333;
+     }
 
      .navbar-brand {
           color: #fff;
@@ -29,34 +35,70 @@ body {
                color: #fff;
           }
      }
+
      .navbar-nav {
           .nav-link {
                color: #333;
                text-transform: uppercase;
                font-size: 1.2rem;
                font-weight: 400;
+               cursor: pointer;
+               display: block;
+               font-family: Poppins,Helvetica,Arial,Verdana,sans-serif;
+               line-height: 19px;
+               margin-left: 2rem;
+               padding: 0;
+               text-transform: none;
+               white-space: nowrap;
+
+               &:hover {
+                    color: #0047d6;
+               }
           }
      }
 
+     /** Bouton devis gratuit*/
     .devis {
+         padding: 0.5rem 1rem;
           .mybtn {
-               background-color: #fff;
-               border-color: #0047d6;
-               color: #0047d6;
-               font-size: 1.2rem;
-               font-weight: 700;
-               text-transform: uppercase;
-               padding: 0.5rem 1rem;
-               border-radius: 0.25rem;
-               transition: all 0.3s ease-in-out 0s;
+               background-color: #0047d6;
+               border-radius: 60px;
+               border-style: none;
+               box-shadow: #e81c2e 0 0 0 0 inset;
+               box-sizing: border-box;
+               color: #fff;
+               cursor: pointer;
+               display: inline-block;
+               font-family: Barlow,sans-serif;
+               font-size: 16px;
+               font-weight: 500;
+               line-height: 1.5;
+               padding: 10px 30px 12px;
+               text-align: center;
+               text-decoration: none;
+               transition: all .5s ease-out;
+               user-select: none;
+               vertical-align: middle;
+
                &:hover {
-                    border-color: #fff;
+                    background-color: #e81c2e;
+                    box-shadow: #e81c2e 200px 0 0 0 inset;
                     color: #fff;
-                    background-color: #555555;
+                    outline: none;
+               }
+               &:focus {
+                    outline: none;
+               }
+               &:active {
+                    outline: 0;
+               }
+               &:disabled {
+                    cursor: not-allowed;
+                    opacity: 65;
                }
           }
-    }
-
+     }
+    /** Menu déroulant*/
     .dropdown-menu {
          margin-top: 10px;
           background-color: #fff;
@@ -81,6 +123,7 @@ body {
      }
 }
 
+/** Carousel*/
 .carousel {
      .carousel-inner {
           .carousel-item {
@@ -89,11 +132,157 @@ body {
                     object-fit: cover;
                     transition: all 0.3s ease-in-out 0s;
                }
+               
+               .btncarousel {
+                    @extend .devis;
+               }
           }
      }
      .carousel-indicators {
           .active {
                background-color: #d60000;
+          }
+     }
+}
+
+//   * Section services web
+.services-web {
+     padding: 4rem 0;
+     background-color: #f5f5f5;
+
+     .services-web-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          text-align: center;
+          margin-bottom: 2rem;
+
+           h4 {
+               color: #0047d6;
+               font-size: 1rem;
+          }
+          h4, h2, p {
+               text-align: center;
+               align-items: center;
+               justify-content: center;
+          }
+     }
+
+      .box {
+          cursor: pointer;
+          &:hover {
+               background-color: #ffffff;
+               box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+               transition: all 0.3s ease-in-out 0s;
+          }
+          .box-headding {
+               color: #0047d6;
+               font-size: 1rem;
+               font-size: 1rem;
+          }
+          .box-content {
+               text-align: left;
+          }
+     }
+} 
+
+//  * Section contact
+
+.section-contact {
+     padding: 0.5rem 1rem;
+     .btn-devis {
+          background-color: #0047d6;
+          border-style: none;
+          border-radius: 60px;
+          box-shadow: #e81c2e 0 0 0 0 inset;
+          box-sizing: border-box;
+          color: #fff;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.5;
+          padding: 10px 30px 12px;
+          text-align: center;
+          text-decoration: none;
+          transition: all .5s ease-out;
+          user-select: none;
+          vertical-align: middle;
+
+          &:hover {
+               background-color: #e81c2e;
+               box-shadow: #e81c2e 200px 0 0 0 inset;
+               color: #fff;
+               outline: none;
+          }
+          &:focus {
+               outline: none;
+          }
+          &:active {
+               outline: 0;
+          }
+          &:disabled {
+               cursor: not-allowed;
+               opacity: 65;
+          }
+     }
+}
+
+/**  Media query*/
+@media  screen and (max-width: 912px) {
+     .navbar {
+          background-color: #e0e0e0;
+          .navbar-brand {
+               padding: 0.5rem 1rem;
+               font-size: 1.2rem;
+          }
+          .navbar-nav {
+               .nav-link {
+                    padding: 0.8rem 0;
+                    border-bottom: 1px solid #f5f5f5;
+                    font-size: 1rem;
+                    margin-left: 1rem;
+                    
+                    &:last-child {
+                         border-bottom: none;
+                    }
+               }
+          }
+     }
+     .devis {
+          width: 100%;
+          left: 0;
+          bottom: 0;
+          margin: 0 auto;
+          position: fixed;
+          padding: 0.5rem;
+          text-align: center;
+          background-color: #0047d6;
+          .mybtn {
+               width: 100%;
+               color: #fff;
+               border-radius: 0;
+               font-size: 1.2rem;
+               font-weight: 700;
+               text-transform: uppercase;
+               padding: 0.5rem 1rem;
+               background-color: transparent;
+          }
+    }
+
+    .carousel {
+          .carousel-inner {
+               .carousel-item {
+                    .img-slide {
+                         height: 40vh;
+                         object-fit: cover;
+                         transition: all 0.3s ease-in-out 0s;
+                    }
+               }
+          }
+          .carousel-indicators {
+               .active {
+                    background-color: #d60000;
+               }
           }
      }
 }

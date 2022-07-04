@@ -1,37 +1,36 @@
+<?php 
+require_once 'Classes/classes.php';
+//use Classes\Menu;
+?>
 
-
-<nav class="mynavbar navbar navbar-expand-lg fixed-top">
-
-
+<nav class="w3-panel-top mynavbar navbar navbar-expand-lg fixed-top">
      <div class="container">
-          <a class="navbar-brand" href="#">DWM</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="mycollapse collapse navbar-collapse" id="navbarNav">
-               <div class="navbar-nav mr-auto justify-content-center">
-                    <a class="nav-link active" href="#">Accueil<span class="sr-only">(current)</span></a>
-                    <a class="nav-link" href="#">À propos</a>
-                    <a class="nav-link" href="#">Formation</a>
-                    <a class="nav-link" href="#">Prestations</a>
-                    <div class="nav-item dropdown">
-                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Tutoriels
-                         </a>
-                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">PHP</a>
-                              <a class="dropdown-item" href="#">SYMFONY</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">AWS</a>
-                         </div>
-                    </div>
-                    <a class="nav-item nav-link active" href="#">Contacts</a>
-               </div>
-          </div>
-          
-          <div class="devis w-45 text-end">
-               <a class="btn btn-default mybtn" href="#">Devis gratuit</a>
-          </div>
-          
+		<a class="navbar-brand" href="#">DWM</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		 </button>
+	     <div class="mycollapse collapse navbar-collapse" id="navbarNav">
+		     <div class="navbar-nav mr-auto">
+				<?php
+				     $menu1 = new Menu('index.php', 'Accueil', 'nav-link active');
+					$menu2 = new Menu('#propos', 'À propos', 'nav-link');
+					$menu3 = new Menu('#formations', 'Formations', 'nav-link');
+					$menu4 = new Menu('#prestations', 'Prestations', 'nav-link');
+					$menu5 = new Menu('#contact', 'Contacts <i class="fas fa-user-circle"></i>', 'nav-link nav-item');
+					$menu1->afficher();
+					$menu2->afficher();
+					$menu3->afficher();
+					$menu4->afficher();
+					$menu5->afficher();
+				?>			
+				</div>
+		     </div>
+	     </div>
+	     <div class="devis w-45">
+			<?php 
+				$menu6 = new Menu('#devis', 'Devis gratuit', 'mybtn');
+				$menu6->afficher();
+			?>
+		</div>
      </div>
 </nav>
