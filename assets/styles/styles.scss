@@ -529,8 +529,12 @@ body {
           }
      }
 }
-
 // * End of Form devis
+
+// * On créé une transition pour le div qui contient le formulaire
+.transition {
+     transition: all 0.5s ease-in-out;
+}
 
 
 // * Start of Mini Post carousel

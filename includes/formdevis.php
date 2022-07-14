@@ -37,7 +37,11 @@ require_once 'Classes/controller.php';
                </div>
                
                <div class="w3-col m8 w3-padding-64 p-5 w3-card card-contact__form">
-                    <form action="formdevis.php" method="post">
+                    <!-- Affiche les erreurs de validation du formulaire -->
+                    <div id="error"></div>
+                    <div id="success"></div>
+
+                    <form action="#" method="post" id="form" name="form" onclick="checkFormData();">
                          <div class="row">
                               <div class="col-md-6">
                                    <p>
@@ -76,7 +80,10 @@ require_once 'Classes/controller.php';
                               
                               <div class="form-group col-12">
                                    <p>
-                                        <?= $submit->view(); ?>
+                                        <!-- Bouton -->
+                                        <button type="submit" class="w3-button w3-gray w3-round w3-padding-large" id="submit" name="submit" onclick="checkForm();">
+                                             Envoyer
+                                        </button>
                                    </p>
                               </div>
                          </div>

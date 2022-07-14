@@ -110,5 +110,6 @@
 <script src="assets/js/f88b724a6b.js"></script>
 <script src="assets/js/scripts.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/formcontroller.js"></script>
 </body>
 </html>

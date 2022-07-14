@@ -14,7 +14,6 @@
 <!-- Mini carousel -->
 <?php include "includes/minicarousel.php"; ?>
 <!-- Témoignages -->
-<?php include "includes/testimonies.php"; ?>
 
 <!-- Formulaire de devis -->
 <?php include "includes/formdevis.php"; ?>

@@ -861,6 +861,11 @@ body {
   outline: none;
 }
 
+.transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
 .center {
   -webkit-box-align: center;
       -ms-flex-align: center;

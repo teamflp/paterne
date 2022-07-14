@@ -8,28 +8,21 @@ require_once 'Classes/classes.php';
 <!-- navbar pour les cordonnées -->
 <nav class="navbar-tel-email w3-padding-16 navbar-light bg-light">
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<?php
-				// @param $lien : lien de la page
-				// @param $text : texte du lien
-				// @param $class : classe du lien
-				// @param $icon : icone du lien
+		<div class="col-2">
+			<?php
+			$tel = new CreateLink();
+			$tel->setView('tel:+33663436087', '(+33) 663 43 60 87', 'nav-link',  'fab fa-whatsapp w3-text-green');
+			$tel->view();
 
-				$tel = new CreateLink();
-				$tel->setView('tel:+33663436087', '(+33) 663 43 60 87', 'nav-link',  'fab fa-whatsapp');
-				$tel->view();
-
-				$email = new CreateLink();
-				$email->setView('mailto:it.devwebm@gmail.com', 'it.devwebm@gmail.com', 'nav-link', 'fas fa-envelope');
-				$email->view();
-				?>
-			</div>
+			$email = new CreateLink();
+			$email->setView('mailto:it.devwebm@gmail.com', 'it.devwebm@gmail.com', 'nav-link', 'fas fa-envelope w3-text-gray');
+			$email->view();
+			?>
 		</div>
 	</div>
 </nav>
 
-<nav class="w3-panel-top w3- mynavbar navbar navbar-expand-lg" id="mynav" v-show="show_nav" >
+<nav class="w3-panel-top w3- mynavbar navbar navbar-expand-lg" id="mynav">
      <div class="container">
 		<h3 class="navbar-brand" href="#">DWM</h3>
 		<div class="row">
@@ -78,7 +71,7 @@ require_once 'Classes/classes.php';
 				// @param $icon : icone du lien
 
 					$devis = new CreateLink();
-					$devis->setView('#devis', 'Devis', 'nav-link mybtn', '');
+					$devis->setView('#devis', 'DEVIS GRATUIT', 'nav-link mybtn', '');
 					$devis->view();
 				?>
 			</div>
