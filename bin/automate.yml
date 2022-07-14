@@ -1,0 +1,73 @@
+---
+#Based on https://github.com/PacktPublishing/Learning-Ansible-2.X-Third-Edition/blob/master/Chapter05/playbooks/aws_simple_provision.yaml
+- name: "PROVISION EC2 INSTANCES"
+  hosts: localhost
+  vars:
+    unique_value: trainer1
+    default_ssh_username: "ubuntu" #Only for printing informations
+    pubkey_path: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    region: "eu-west-1"
+    ami: "ami-04c58523038d79132"
+    instance_type: "t2.micro"
+    instance_name:
+      - "ansible-node1-{{ unique_value }}"
+      - "ansible-node2-{{ unique_value }}"
+  tasks:
+    - name: "1) Check if aws-cli is installed"
+      command: "which aws"
+      register: aws_result
+      failed_when: "'FAILED' in aws_result.stderr"
+      changed_when: "aws_result.rc != 0"
+    - name: "2) Ensure key pair is present"
+      ec2_key:
+        name: "admin-{{ unique_value }}"
+        key_material: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+    - name: "3) Gather information of the EC2 VPC net in {{ region }}"
+      ec2_vpc_net_info:
+        region: "{{ region }}"
+      register: aws_ec2_net
+    - name: "4) Gather information of the EC2 VPC subnet in {{ region }}"
+      ec2_vpc_subnet_info:
+        region: "{{ region }}"
+        filters:
+          vpc-id: '{{ aws_ec2_net.vpcs.0.id }}'
+      register: aws_ec2_subnet
+    - name: "5) Ensure Open Security Group is present"
+      ec2_group:
+        name: "ossg {{ unique_value }}"
+        description: Open Security Group
+        region: "{{ region }}"
+        vpc_id: '{{ aws_ec2_net.vpcs.0.id }}'
+        rules:
+          - proto: all
+            cidr_ip: 0.0.0.0/0
+        rules_egress:
+          - proto: all
+            cidr_ip: 0.0.0.0/0
+      register: aws_ec2_ossg
+    - name: "6) Setup instances as present"
+      ec2:
+        assign_public_ip: True
+        image: "{{ ami }}"
+        region: "{{ region }}"
+        key_name: "admin-{{ unique_value }}"
+        exact_count: 1
+        count_tag:
+          Name: '{{ item }}'
+        instance_tags:
+          Name: '{{ item }}'
+        instance_type: "{{ instance_type }}"
+        group_id: '{{ aws_ec2_ossg.group_id }}'
+        vpc_subnet_id: '{{ aws_ec2_subnet.subnets.0.id }}'
+        volumes:
+          - device_name: /dev/sda1
+            volume_type: standard
+            volume_size: 10
+            delete_on_termination: True
+      register: aws_ec2_instances
+      loop: "{{ instance_name }}"
+    - name: "7) print the ip adresses"
+      debug:
+        msg: "Connect to your {{ item.tagged_instances.0.tags.Name }} with 'ssh {{ default_ssh_username }}@{{ item.tagged_instances.0.public_ip }}'"
+      loop: "{{ aws_ec2_instances.results }}"
+      when: item.tagged_instances.0.public_ip

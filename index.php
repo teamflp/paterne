@@ -11,11 +11,12 @@
 
 <!-- Section services -->
 <?php include "includes/services.php"; ?>
-<div class="container">
-<script>
-     router.push('/');
-     router.push('/formations');
-     router.push('/services');
-     router.push('/contact');
-</div>
+<!-- Mini carousel -->
+<?php include "includes/minicarousel.php"; ?>
+<!-- Témoignages -->
+<?php include "includes/testimonies.php"; ?>
+
+<!-- Formulaire de devis -->
+<?php include "includes/formdevis.php"; ?>
+
 <?php include "includes/footer.php"; ?>

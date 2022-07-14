@@ -104,3 +104,79 @@ router.push('/formations');
 router.push('/services');
 router.push('/contact');
 
+// créer des liens pour les pages
+
+new Vue({
+     el: '#mynav',
+     data: {
+          navs: [
+               {
+                    url: './index.html',
+                    alt: 'Accueil',
+                    text: 'Accueil',
+               },
+               {
+                    url: './formations.html',
+                    alt: 'Formations',
+                    text: 'Formations',
+               },
+               {
+                    url: './services.html',
+                    alt: 'Services',
+                    text: 'Services',
+               },
+               {
+                    url: './contact.html',
+                    alt: 'Contact',
+                    text: 'Contact',
+               },
+          ],
+
+          // créer un bouton pour le menu mobile
+          nav_mobile: [
+               {
+                    url: './index.html',
+                    alt: 'Accueil',
+                    text: 'Accueil',
+               },
+          ],
+
+          // On récupère la largeur de l'écran
+          screen_width: window.innerWidth,
+          // On récupère la hauteur de l'écran
+          screen_height: window.innerHeight,
+
+          // On créé une animation
+          show_nav: false,
+     },
+     methods: {
+          // Fonction pour afficher le menu mobile
+          show_nav_mobile: function() {
+               this.show_nav_mobile = true;
+               this.hide_nav_mobile = false;
+          }
+          // Fonction pour cacher le menu mobile
+     },
+     mounted: function () {   // Fonction pour afficher le menu mobile
+          window.addEventListener('resize', () => {
+               this.screen_width = window.innerWidth;
+               this.screen_height = window.innerHeight;
+          });
+     },
+
+     // Créer une méthode pour cacher la navbar
+     // quand on scroll
+     // et afficher la navbar quand on revient en haut
+     // et quand on scroll
+     
+     methods: {
+          show_nav: function () { 
+               if (this.screen_height >= 68) { 
+                    this.show_nav = false;
+               }
+               else {
+                    this.show_nav = true;
+               }
+          }
+     },
+});

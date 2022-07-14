@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "animate.js": "^2.0.2",
     "bootstrap": "^5.2.0-beta1",
     "jquery": "^3.6.0",
+    "progressbar.js": "^1.1.0",
     "vue-router": "^4.0.16"
   }
 }

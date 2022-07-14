@@ -4,6 +4,34 @@ $black: #000;
 $gray-light: #f5f5f5;
 $gray-dark: #333;
 $gray-darker: #222;
-$shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+$shadow: #64646f33 0px 7px 29px 0px;
 $blue: #0047d6;
-$hover-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+$hover-shadow: #0000003d 0px 3px 8px;
+
+// On créé un boucle pour définir la taille du texte
+     @for $i from 1 through 20 {
+          .text-#{$i} {
+               font-size: 0.5em * $i;
+          }
+     }
+
+     // On créé une boucle pour définir la largeur de barre verticale
+     @for $i from 1 through 20 {
+          .width-hr-#{$i} {
+               width: 5% * $i;
+          }
+     }
+
+     // On créé une boucle pour définir la hauteur de barre verticale
+     @for $i from 1 through 10 {
+          .height-hr-#{$i} {
+               height: 1px * $i;
+          }
+     }
+
+     // On créé une boucle pour définir la hauteur d'un bloc
+     @for $i from 1 through 10 {
+          .h-#{$i} {
+               height: 20px * $i;
+          }
+     }

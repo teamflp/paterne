@@ -1,3 +1,5 @@
+<?php require_once 'Classes/classes.php'; ?>
+
 <!-- section services -->
 <div class="container-fluid services-web">
      <div class="container">
@@ -37,10 +39,9 @@
                     </div>
                     <div>
                          <h4 class="box-headding">Maintenance ordinaire</h4>
-                         <p class="box-content">
+                         <p class="box-content lead">
                               Service de mise à jour et de maintenance WordPress, plugins et modèles graphiques
                          </p>
-
                     </div>
                </div>
 
@@ -78,7 +79,6 @@
                          <p class="box-content">
                               Service d'hébergement Web qui comprend le domaine et l'espace Web
                          </p>
-
                     </div>
                </div>
           </div>
@@ -86,16 +86,22 @@
 </div>
 
 <!-- Section boutons contact -->
-<section class="container-fluid w3-black w3-padding-64">
-     <div class="container section-contact ">
+<section class="container-fluid w3-black w3-padding">
+     <div class="container section-contact">
           <div class="row">
                <div class="col">
-                    <h2 class="text-center mb-5">Vous souhaitez créer un nouveau projet web pour votre entreprise</h2>
+                    <h2 class="text-center mb-5 lead">
+                         Vous souhaitez créer un nouveau projet web pour votre entreprise ?<br>
+                         Vous souhaitez vous démarquer sur le web ? <br>
+                    </h2>
+                    
                     <div class="text-center">
                          <a href="#devis" class="w3-btn btn-devis">
-                              <i class="fa-solid fa-envelope"></i>&nbsp; 
-                              Demandez un devis gratuit
+                              <i class="fa-solid fa-envelope"></i>&nbsp; Demandez un devis gratuit
                          </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                         <a href="tel:+33 663436087" class="w3-btn w3-border btn-tel">
+                              <i class="fa-solid fa-phone"></i>&nbsp; (+33) 663 43 60 87
+                         </a>
                     </div>
                </div>
           </div>
@@ -109,49 +115,116 @@
                <div class="col">
                     <h4 class="text-center">Derniers projets web réalisés</h4>
                     <h2 class="text-center">Création et maintenance du site web</h2>
-                    <p class="text-center">Sites Web et e-commerce pour tous les besoins</p>
+                    <p class="text-center mb-5">Sites Web et e-commerce pour tous les besoins</p>
                     <div class="row">
                          <div class="col">
-                              <div class="card">
-                                   <img src="../../paterne/assets/images/carousel/04.webp" class="card-img-top" alt="...">
+                              <div class="w3-card w3-padding">
+                                   <img src="../../paterne/assets/images/projets/festyvevents.png" class="card-img-top" alt="Fest'yv events">
                                    <div class="card-body">
-                                        <h5 class="card-title">Projet 1</h5>
+                                        <h5 class="card-title">Fest'Yv Events</h5>
                                         <p class="card-text">
-                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                             Association Fest’yv Events.
                                         </p>
-                                        <a href="#" class="btn btn-primary">Voir le projet</a>
+                                        <a href="https://festyvevents.com/" class="btn btn-primary" target="_blank">Voir le projet</a>
                                    </div>
                               </div>
                          </div>
                          
                          <div class="col">
-                              <div class="card">
-                                   <img src="../../paterne/assets/images/carousel/06.webp" class="card-img-top" alt="...">
+                              <div class="w3-card w3-padding">
+                                   <img src="../../paterne/assets/images/projets/transports.png" class="card-img-top" alt="Transports Urgent">
                                    <div class="card-body">
-                                        <h5 class="card-title">Projet 2</h5>
+                                        <h5 class="w3-card-title">Transports Urgent</h5>
                                         <p class="card-text">
-                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                             FS Express Transports Urgent.
                                         </p>
-                                        <a href="#" class="btn btn-primary">Voir le projet</a>
+                                        <a href="https://transportsurgent.com/index.html" class="btn btn-primary" target="_blank">Voir le projet</a>
                                    </div>
                               </div>
                          </div>
 
                          <div class="col">
-                              <div class="card">
-                                   <img src="../../paterne/assets/images/carousel/07.webp" class="card-img-top" alt="...">
+                              <div class="w3-card w3-padding">
+                                   <img src="../../paterne/assets/images/projets/zis.png" class="card-img-top" alt="ZIS">
                                    <div class="card-body">
-                                        <h5 class="card-title">Projet 2</h5>
+                                        <h5 class="card-title">ZIS</h5>
                                         <p class="card-text">
-                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                             Zen in Shopping vente d'équipements informatique.
                                         </p>
-                                        <a href="#" class="btn btn-primary">Voir le projet</a>
+                                        <a href="https://master.d1ro937jgjd6xa.amplifyapp.com/" class="btn btn-primary" target="_blank">Voir le projet</a>
                                    </div>
                               </div>
                          </div>
                     </div>
                </div>
-          </div>              
+          </div>
+     </div>             
 </section>
 
+<!-- Barre de progression -->
+<!-- <section class="container-fluid services-web">
+     <div class="container">
+          <div class="row">
+               <h2 class="text-center">
+                    Nos services
+               </h2>
+               <p class="text-center mb-5">
+                    Nous offrons des services de qualité pour vous aider à réaliser vos projets.
+               </p>
+               <div class=" col-md-6 text-competences">
+                    <h2>Compétence et professionnalisme au service de votre entreprise</h2>
+                    <p >
+                         Pour toute entreprise qui se respecte, le site web est la première chose que voit un client potentiel : 
+                         c'est son image sur le web, sa carte de visite en ligne. Pour répondre à vos besoins, vous devez vous appuyer 
+                         sur un véritable professionnel du marketing Web.
+                         Bien publier un site web garantit la frubilité des utilisateurs et une plus grande visibilité et positionnement sur 
+                         les moteurs de recherche. Des mises à jour périodiques sont essentielles pour éviter les problèmes de 
+                         fonctionnement et de sécurité causés par les logiciels malveillants.
+                    </p>
+               </div>
+               <div class=" col-md-1">
+               </div>
+
+               <div class=" col-md-5 w3-border">
+                    <div class="col-md-12">
+                         <div class="progress bar">
+                              <div class="progress-bar bg-success bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                   <span class="sr-only">100% Complete</span>
+                              </div>
+                         </div>
+                         <h4>Test de vitesse Google</h4>
+                    </div>
+
+                    <div class="col-md-12">
+                         <div class="progress bar">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                   <span class="sr-only">25% Complete</span>
+                              </div>
+                         </div>
+                         <h4>Création de site web</h4>
+                    </div>
+
+                    <div class="col-md-12">
+                         <div class="progress bar">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                   <span class="sr-only">25% Complete</span>
+                              </div>
+                         </div>
+                         <h4 class="text-center">Optimisation du référencement</h4>
+                    </div>
+
+                    <div class="col-md-12">
+                         <div class="progress bar">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                   <span class="sr-only">25% Complete</span>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</section> -->
+
+<!-- Section publicité formation -->
+<!-- Offre de formation -->
 
